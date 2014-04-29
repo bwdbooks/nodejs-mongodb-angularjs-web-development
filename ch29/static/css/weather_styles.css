@@ -1,0 +1,23 @@
+.cities { display:inline-block; width:100px; vertical-align: top; }
+.city{ border: 1px solid black; cursor: pointer; padding: 5px; 
+  text-align: center;
+  background-image: -webkit-linear-gradient(top, #CCCCCC, #EEEEEE); }
+.weatherData { display:inline-block; width:220px; 
+  background-color:white; border:3px ridge blue; margin:10px; 
+  padding:15px; border-radius:10px; }
+.weatherInfo { display:inline-block; width:100px; 
+  font: 16px/20px Helvetica, sans-serif; }
+label.weatherInfo{ text-align: right; }
+span.weatherInfo{ padding-left: 10px; color: blue; 
+  font-weight: bold; }
+.weatherTemp { font: 36px/48px Helvetica, sans-serif; 
+  padding-left:20px; color:blue }
+.weatherCity { font: 28px/36px Georgia, serif; 
+  padding:5px; margin:0}
+.weatherDesc { font: 20px/28px Georgia, serif; 
+  padding:5px; margin:0}
+.weatherInput { padding:3px; border:2px ridge blue; 
+  border-radius: 5px; }
+.weatherButton { padding:3px; width:100px; border:2px ridge blue; 
+  border-radius: 5px; background-color: blue; color: white;
+  font-weight: bold; }

@@ -1,0 +1,38 @@
+<div ng-controller="tableController"><hr>
+<input class="findButton" type="button" 
+       value="Find Words" ng-click="find()" />
+<div id="sortOptions">
+  <label class="tableLabel">Page Limit</label>
+  <input class="tableInput" type="text" ng-model="limit" /><br>
+  <label class="tableLabel">Contains</label>
+  <input class="tableInput" type="text" ng-model="contains" /><br>
+  <label class="tableLabel">Sort By</label>
+  <select class="tableInput" ng-model="sortField" 
+          ng-options="field for field in sortFields"></select>
+  <input type="radio" ng-model="direction" value="asc"> Ascending
+  <input type="radio" ng-model="direction" value="desc"> Descending
+</div>
+<hr>
+<div>
+  <input class="pageButton" type="button" value="Prev" 
+         ng-click="prev()" />
+  <input class="pageButton" type="button" value="Next" 
+         ng-click="next()" />
+  <label class="tableLabel">Words {{skip+1}} to {{skipEnd}}</label>
+  <hr>
+  <div id="tableContainer">
+    <table>
+      <tr><th>Word</th><th>First</th><th>Last</th><th>Length</th>
+      <th>Vowels</th><th>Consonants</th></tr>
+      <tr ng-repeat="word in words">
+        <td>{{word.word}}</td>
+        <td>{{word.first}}</td>
+        <td>{{word.last}}</td>
+        <td>{{word.size}}</td>
+        <td>{{word.stats.vowels}}</td>
+        <td>{{word.stats.consonants}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>

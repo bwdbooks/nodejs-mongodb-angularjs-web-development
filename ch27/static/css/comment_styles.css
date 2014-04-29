@@ -1,0 +1,38 @@
+div#photosContainer{
+  background:black; color: white;
+  border: 4px ridge blue; width:800px;
+}
+div.photoItem{ display:inline-block; width:120px; }
+div#photoContainer,
+div#photoComments{
+  background:black; color: white; width: 400px; height:450px;
+  display: inline-block;  float:left; border: 2px ridge blue;
+}
+div#photoComments{ background:white; color: black;
+  max-height:500px; overflow-y:scroll;
+}
+div#pageComments{ margin:0px; clear:both;	width:810px; }
+div.comment{ border: 2px ridge blue; padding:10px; 
+  border-radius: 5px;
+}
+img.listPhoto{ width:100px; }
+img.mainPhoto{ width:400px; }
+.commentBody{	background-color:lightgray;	
+  border-radius: 5px; padding: 5px; margin:0;
+}
+.imageTitle{ font-size: 28px; font-weight: bold; 
+  text-align: center; margin:0
+}
+.commentTitle{ font-size: 18px; font-weight: bold;}
+.username{ font-style: italic; color:blue; }
+.subject{ font-weight: bold;}
+.timestamp{ color:#555555; font-style: italic; 
+  font-size: 12px; text-align: right; margin:0;
+}
+input[type="text"],
+textarea{	border: 2px ridge blue;	border-radius: 5px;	
+  padding:3px; width:95%;
+}
+input[type="button"]{	background-color:blue;color:white;
+  border-radius: 5px;
+}

@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+  <title>AngularJS Data Binding Directives</title>
+  <style>
+    .even{background-color:lightgrey;}
+    .rect{display:inline-block; height:40px; width:100px;}
+  </style>
+</head>
+<body>
+  <div ng-controller="myController">
+    <h2>Data Binding Directives</h2>
+    <label ng-repeat="color in colors">
+      {{color}}
+      <input type="radio" ng-model="myStyle['background-color']"
+             ng-value="color" id="{{color}}" name="mColor">
+    </label>
+    <span class="rect" ng-style="myStyle"></span><hr>
+    <li ng-repeat="day in days">
+      <span ng-class-even="'even'">{{day}}</span>
+    </li><hr>
+    Show Message: <input type="checkbox" ng-model="checked" />
+    <p ng-if="checked" ng-bind="msg"> </p>
+  </div>
+  <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+  <script src="/js/directive_bind.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<div id="cartsContainer">
+  <div class="listItem" ng-repeat="item in customer.cart" 
+    ng-init="product=item.product[0]">
+    <img class="listImg" ng-click="setProduct(product._id)"
+         ng-src="../images/{{product.imagefile}}" />
+    <span class="prodName">{{product.name}}</span>
+    <span >
+      <span class="price">{{product.price|currency}}</span>
+      <input class="quantity" type="text" ng-model="item.quantity" />
+      <label class="quantity">Quantity</label>
+      <span class="delete" 
+            ng-click="deleteFromCart(product._id)">Remove</span>
+    </span>
+  </div>
+  <hr>
+  <div>
+    <span>Shipping</span>
+    <span class="price">{{shipping|currency}}</span>
+  </div>
+  <hr>
+  <div>
+    <span>Total</span>
+    <span class="price">{{cartTotal()|currency}}</span>
+   </div>
+   <hr>
+  <div>
+	  <span class="button" ng-click="checkout()" 
+	        ng-hide="customer.cart.length==0">
+	    Checkout
+	  </span>
+	  <span class="button" ng-click="setContent('products.html')">
+	    Continue Shopping
+	  </span>
+  </div>
+</div>

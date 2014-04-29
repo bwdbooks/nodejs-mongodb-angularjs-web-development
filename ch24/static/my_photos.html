@@ -1,0 +1,7 @@
+<div>
+  <span ng-repeat="photo in photos" 
+        ng-class="{active:photo.selected}">
+    <a href="" ng-click="select(photo)">{{photo.title}}</a>
+  </span>
+  <div ng-transclude></div>
+</div>

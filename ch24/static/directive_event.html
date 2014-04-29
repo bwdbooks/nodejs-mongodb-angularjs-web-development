@@ -1,0 +1,27 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+  <title>AngularJS Event Directives</title>
+</head>
+<body>
+  <div ng-controller="myController">
+    <h2>Event Directives</h2>
+    <input type="text" 
+        ng-blur="focusState='Blurred'" 
+        ng-focus="focusState='Focused'"
+        ng-mouseenter="mouseState='Entered'" 
+        ng-mouseleave="mouseState='Left'" 
+        ng-mouseclick="mouseState='Clicked'" 
+        ng-mousedown="mouseState='Down'" 
+        ng-mouseup="mouseState='Up'" 
+        ng-keyup="keyStroke($event)" 
+        ng-click="mouseClick($event)"><hr>
+    Focus State: {{focusState}}<br/>
+    Mouse State: {{mouseState}}<br/>
+    Key Info: {{keyInfo|json}}<br/>
+    Mouse Info: {{mouseInfo|json}}<br/>
+  </div>
+  <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+  <script src="/js/directive_event.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+  <title>AngularJS Custom Directive</title>
+</head>
+<body>
+  <div ng-controller="myController">
+    <h2>Custom Directive</h2>
+    <p ng-click="myFunc()">{{title}}</p>
+<div my-directive 
+     my-func="myFunc()" 
+     title="title"
+     info="SomeString"
+     ></div>
+  </div>
+  <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+  <script src="/js/directive_custom.js"></script>
+</body>
+</html>

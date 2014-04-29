@@ -1,0 +1,14 @@
+<div id="productContainer">
+   <img class="fullImg" 
+        ng-src="../images/{{product.imagefile}}" />
+   <div class="prodInfo">
+	   <p class="itemTitle">{{product.name}}</p>
+     <p class="prodDesc">{{product.description}}</p>
+     <p class="fullPrice">{{product.price|currency}}</p>
+	   <p class="status">{{product.instock}} available</p>
+	   <p class="cartButton" ng-click="addToCart(product._id)">
+	     Add to Cart 
+	     <img src="/images/cart.png" />
+	   </p>
+   </div>
+</div>

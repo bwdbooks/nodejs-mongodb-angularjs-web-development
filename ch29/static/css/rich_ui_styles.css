@@ -1,0 +1,9 @@
+.tab{display:inline-block; width:100px; cursor: pointer;
+  border-radius: .5em .5em 0 0; border:1px solid black; 
+  text-align:center; font: 15px/28px Helvetica, sans-serif;
+  background-image: -webkit-linear-gradient(top, #CCCCCC, #EEEEEE) }
+.activeTab{border-bottom:none;
+  background-image: -webkit-linear-gradient(top, #66CCFF, #CCFFFF) }
+.pane{border:1px solid black; margin-top:-2px; 
+  background-color:#CCFFFF; height:450px; width:700px; 
+  padding:10px; }

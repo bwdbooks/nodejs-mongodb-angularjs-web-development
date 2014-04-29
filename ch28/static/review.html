@@ -1,0 +1,49 @@
+<div id="reviewContainer">
+  <div class="listItem" ng-repeat="item in customer.cart" 
+    ng-init="product=item.product[0]">
+    <img class="listImg" ng-click="setProduct(product._id)"
+         ng-src="../images/{{product.imagefile}}" />
+    <span class="prodName">{{product.name}}</span>
+    <span >
+      <span class="price">{{product.price|currency}}</span>
+      <label class="quantity">{{item.quantity}}</label>
+      <label class="quantity">Quantity</label>
+    </span>
+  </div><hr>
+  <div>
+    <span>Shipping</span>
+    <span class="price">{{shipping|currency}}</span>
+  </div><hr>
+  <div>
+    <span>Total</span>
+    <span class="price">{{cartTotal()|currency}}</span>
+  </div><hr>
+  <div>
+    <div class="review">
+      Shipping:<br>
+      {{customer.shipping[0].name}}<br>
+      {{customer.shipping[0].address}}<br>
+      {{customer.shipping[0].city}}, 
+      {{customer.shipping[0].state}}
+      {{customer.shipping[0].zip}}<br>
+    </div>
+    <div class="review">
+      Billing:<br>
+      {{customer.billing[0].cardtype}} ending in
+      {{customer.billing[0].number.slice(-5,-1)}}<br>
+      {{customer.billing[0].address[0].name}}<br>
+      {{customer.billing[0].address[0].address}}<br>
+      {{customer.billing[0].address[0].city}}, 
+      {{customer.billing[0].address[0].state}}
+      {{customer.billing[0].address[0].zip}}<br>
+    </div>
+  </div>
+  <div>
+    <span class="button" ng-click="makePurchase()">
+      Make Purchase
+    </span>
+    <span class="button" ng-click="setContent('products.html')">
+      Continue Shopping
+    </span>
+  </div>
+</div>

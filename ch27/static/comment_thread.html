@@ -1,0 +1,19 @@
+<span class="commentTitle">{{commentThread.title}}</span>
+<input type="button" ng-show="addComment==false" 
+       value="Add Comment" ng-click="addComment=true"></input>
+<form ng-show="addComment==true">
+  <label>Subject</label>
+  <input type="text" ng-model="replySubject")></input>
+  <label>Comment</label>
+  <textarea ng-model="replyBody"></textarea>
+  <input type="button" value="Send" 
+  ng-click=
+  "addComment=false; addReply(commentThread._id,replySubject,replyBody)"
+  ></input>
+</form>
+<input type="button" ng-show="addComment==true" 
+       value="Cancel" ng-click="addComment=false;"></input>
+<div ng-repeat="comment in commentThread.replies" 
+     ng-init="reply=false;replySubject='';replyBody=''">
+  <div class="comment" ng-include="'/static/comment.html'"></div>
+</div>

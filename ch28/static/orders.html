@@ -1,0 +1,23 @@
+<div id="reviewContainer">
+  <div class="listItem" ng-repeat="order in orders">
+    <p class="itemTitle">Order #{{$index+1}}</p>
+    <p class="prodDesc">Placed {{order.timestamp|date}}</p>
+    <p class="status">{{order.status}}</p>
+	  <div class="listItem" ng-repeat="item in order.items" 
+	    ng-init="product=item.product[0]">
+	    <img class="listImg" ng-click="setProduct(product._id)"
+	         ng-src="../images/{{product.imagefile}}" />
+	    <span class="prodName">{{product.name}}</span>
+	    <span >
+	      <span class="price">{{product.price|currency}}</span>
+	      <label class="quantity">{{item.quantity}}</label>
+	      <label class="quantity">Quantity</label>
+	    </span>
+	  </div>
+  </div>
+  <div>
+    <span class="button" ng-click="setContent('products.html')">
+      Continue Shopping
+    </span>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<span class="username">{{comment.username}}</span>: 
+<span class="subject">{{comment.subject}}</span>
+<p class="timestamp"
+>posted {{comment.timestamp|date:"MMMM d yyyy H:mm"}}</p>
+<p class="commentBody">{{comment.body}}</p>
+<input type="button" ng-show="reply==false" 
+       value="Reply" ng-click="reply=true"></input>
+<form ng-if="reply">
+  <label>Subject</label>
+  <input type="text" ng-model="replySubject")></input>
+  <label>Comment</label>
+  <textarea ng-model="replyBody"></textarea>
+  <input type="button" value="Send" 
+         ng-click="addReply(comment._id,replySubject,replyBody)" />
+</form>
+<input type="button" ng-show="reply==true" 
+       value="Cancel" ng-click="reply=false;"></input>
+<div ng-repeat="comment in comment.replies" 
+     ng-init="reply=false;replySubject='';replyBody=''">
+  <div class="comment" ng-include="'/static/comment.html'"></div>
+</div>

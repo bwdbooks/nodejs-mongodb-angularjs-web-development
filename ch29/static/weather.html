@@ -1,0 +1,29 @@
+<div ng-controller="weatherController"><hr>
+  <br><label class="weatherInfo">City:</label>
+  <input class="weatherInput" type="text" ng-model="locationIn" />
+  <input class="weatherButton" type="button" 
+         ng-click="addCity()" value="Add City"/><hr>
+  <div class="cities">
+      <div class="city" ng-repeat="city in cities" 
+           ng-click="setLocation(city)">
+        {{city}}
+      </div>
+  </div>
+  <div class="weatherData">
+    <p class="weatherCity">{{weather.name}}</p>    
+    <img 
+    ng-src="http://openweathermap.org/img/w/{{weather.icon}}.png" />
+    <span class="weatherTemp">{{weather.temp}}&deg;F</span>
+    <p class="weatherDesc">{{weather.description}}</p>
+    <label class="weatherInfo">Clouds:</label>
+    <span class="weatherInfo">{{weather.clouds}}%</span>
+    <label class="weatherInfo">Humidity:</label>
+    <span class="weatherInfo">{{weather.humidity}}%</span>
+    <label class="weatherInfo">Wind Speed:</label>
+    <span class="weatherInfo">{{weather.wind}} mph</span>
+    <label class="weatherInfo">Min Temp:</label>
+    <span class="weatherInfo">{{weather.tempMin}} &deg;F</span>
+    <label class="weatherInfo">Max Temp:</label>
+    <span class="weatherInfo">{{weather.tempMax}} &deg;F</span>
+  </div>
+</div>

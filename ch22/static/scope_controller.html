@@ -1,0 +1,20 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <title>AngularJS Basic Scope</title>
+  </head>
+  <body>
+    <div ng-controller="Counter">
+      <span>Change Amount:</span>
+      <input type="number" ng-model="change"><hr>
+      <span>Value:</span>
+      {{current}}
+      <button ng-click='inc()'>+</button>
+      <button ng-click='dec()'>-</button><hr>
+      <span>Difference:</span>
+      {{difference}}
+    </div>
+    <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+    <script src="/js/scope_controller.js"></script>
+  </body>
+</html>

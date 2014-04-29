@@ -1,0 +1,14 @@
+.shrink-add, .shrink-remove {
+  -webkit-transition:all ease 2.5s;
+  -moz-transition:all ease 2.5s;
+  -o-transition:all ease 2.5s;
+  transition:all ease 2.5s;
+}
+.shrink,
+.shrink-add.shrink-add-active {
+  height:100px;
+}
+.start-class, 
+.shrink-remove.shrink-remove-active {
+  height:400px;
+}

@@ -1,0 +1,43 @@
+p{margin:0}
+label {width:100px; display:inline-block; text-align:right; }
+input[type="text"]{ border: 2px ridge blue; padding:3px; 
+  border-radius:5px; width:400px; }
+#banner{ border-bottom: 2px blue ridge; height:100px }
+#title { text-align:center; background-color:#a0d0ff;
+  font:italic bold 48px/60px Georgia, serif; border-radius: 5px }
+#bar { background-color:#a0d0ff; }
+#cartLink { float:right; text-align:right; cursor:pointer }
+#cartLink img { height:25px; }
+#main {clear:both;}
+.listItem{border-bottom: 1px solid black; clear:both;
+  margin-top:10px }
+.listImg { height:50px; vertical-align:top }
+.fullImg { width:300px; vertical-align:top }
+.prodName {font: bold 16px/20px Arial, Sans-serif; }
+.price{ float:right; color:red; width:75px; text-align:right; 
+  display:inline-block}
+.prodInfo{ display:inline-block; }
+.itemTitle {font: bold 32px/40px Arial, Sans-serif; }
+.fullPrice { color:red; font: bold 20px/24px Arial, Sans-serif; 
+  text-align:right}
+.status {color:green; font: bold 14px/18px Arial, Sans-serif;}
+.prodDesc { font-style: italic; }
+.button,
+.cartButton{ font: 18px/24px Arial, Sans-serif; border-radius: 10px;
+  padding:10px; margin-top:35px; cursor: pointer; width:170px;
+  background-image: -webkit-linear-gradient(top, #FFCC66, #FFFF99);
+  text-align:center}
+.cartButton img { height:20px; float:right}
+.button{ display:inline-block; margin:10px;}
+input.quantity { display:inline-block; float:right; width:30px; }
+label.quantity { display:inline-block; float:right; width:60px; 
+  margin-right:8px; }
+span.orders,
+span.delete { cursor:pointer; display:inline-block; float:right; 
+  background-color:#FF5858;  border-radius: 8px; text-align:center; 
+  font: bold 13px/20px Arial, Sans-serif; 
+  margin-right:20px; width:80px; }
+span.orders{ margin-top:5px; margin-right:10px;
+  background-image: -webkit-linear-gradient(top, #FFCC66, #FFFF99);}
+input.security { width:30px }
+div.review{ display:inline-block; width:45%; vertical-align:top; }

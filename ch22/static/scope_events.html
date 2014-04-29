@@ -1,0 +1,27 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <title>AngularJS Scope Events</title>
+    <style>
+      div{padding:5px; font: 18px bold;}
+      span{padding:3px; margin:12px; border:5px ridge; 
+           cursor:pointer;}
+      label{padding:2px; margin:5px; font: 15px bold;}
+      p{padding-left:22px; margin:5px; }
+    </style>
+  </head>
+  <body>
+    <div ng-controller="Characters">
+      <span ng-repeat="name in names"
+            ng-click="changeName()">{{name}}</span>
+      <div ng-controller="Character"><hr>
+        <label>Name: </label><p>{{currentName}}</p>
+        <label>Race: </label><p>{{currentInfo.race}}</p>
+        <label>Weapon: </label><p>{{currentInfo.weapon}}</p>
+        <span ng-click="deleteChar()">Delete</span>
+      </div>
+    </div>
+    <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+    <script src="/js/scope_events.js"></script>
+  </body>
+</html>

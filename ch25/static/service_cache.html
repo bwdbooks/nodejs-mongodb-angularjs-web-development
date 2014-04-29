@@ -1,0 +1,15 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+  <title>AngularJS $cacheFactory Service</title>
+  <style>span{color:red;}</style>
+</head>
+<body>
+  <div ng-controller="myController">
+    <input type="text" ng-click="keystroke($event)" />
+  </div>
+  <div ng-controller="myController2">Last 5 chars: {{chars}}</div>
+  <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+  <script src="/js/service_cache.js"></script>
+</body>
+</html>
