@@ -9,14 +9,14 @@ fs.mkdir("./data/folderA", function(err){
     });
   });
 });
-fs.rmdir("./data/folderA/folderB/folderC", function(err){
+fs.rmdir("./data/folderA/folderB/folderD", function(err){
   fs.rmdir("./data/folderA/folderB", function(err){
-    fs.rmdir("./data/folderD", function(err){
-    });
-  });
-  fs.rmdir("./data/folderA/folderC", function(err){
-    fs.rmdir("./data/folderE", function(err){
-    });
+    fs.rmdir("./data/folderA/folderC/folderE", function(err){
+      fs.rmdir("./data/folderA/folderC", function(err){
+        fs.rmdir("./data/folderA", function(err){          
+        });          
+      });
+    }); 
   });
 });
 
