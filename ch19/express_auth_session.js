@@ -8,7 +8,8 @@ function hashPW(pwd){
          digest('base64').toString();
 }
 var app = express();
-app.use(bodyParser());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(cookieParser('MAGICString'));
 app.use(session());
 app.get('/restricted', function(req, res){

@@ -4,7 +4,8 @@ var app = express();
 app.use('/', express.static('./static')).
     use('/images', express.static( '../images')).
     use('/lib', express.static( '../lib'));
-app.use(bodyParser());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 var days=['Monday', 'Tuesday', 'Wednesday',
           'Thursday', 'Friday'];
 var serviceDays = days.slice(0);

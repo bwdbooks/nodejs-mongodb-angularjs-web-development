@@ -1,7 +1,8 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
-app.use(bodyParser());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.get('/', function (req, res) {
   var response = '<form method="POST">' +
         'First: <input type="text" name="first"><br>' +
