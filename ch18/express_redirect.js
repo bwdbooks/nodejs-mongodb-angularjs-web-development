@@ -12,7 +12,7 @@ app.get('/second', function (req, res) {
   res.send("Response from Second");
 });
 app.get('/level/A', function (req, res) {
-  res.redirect("../B");
+  res.redirect("/level/B");
 });
 app.get('/level/B', function (req, res) {
   res.send("Response from Level B");

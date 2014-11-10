@@ -6,7 +6,7 @@ mongoose.connection.once('open', function(){
   var query = Words.findOne().where('word', 'gratifaction');
   query.exec(function(err, doc){
     console.log("Before Update: ");
-    console.log(doc.toString());
+    console.log(doc.toJSON());
     var query = doc.update({$set:{word:'gratifactions', 
                                   size:13, last:'s'},
                             $push:{letters:'s'}});
@@ -14,7 +14,7 @@ mongoose.connection.once('open', function(){
       console.log("\n%d Documents updated", results);
       Words.findOne({word:'gratifactions'}, function(err, doc){
         console.log("\nAfter Update: ");
-        console.log(doc.toString());
+        console.log(doc.toJSON());
         mongoose.disconnect();
       });
     });

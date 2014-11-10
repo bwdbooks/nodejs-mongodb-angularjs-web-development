@@ -7,13 +7,11 @@ app.set('view engine', 'jade');
 app.engine('jade', jade.__express);
 app.engine('html', ejs.renderFile);
 app.listen(80);
-app.locals({
-  uname : 'Brad',
-  vehicle: "Jeep",
-  terrain: "Mountains",
-  climate: "Desert",
-  location: "Unknown"
-});
+app.locals.uname = "Brad";
+app.locals.vehicle = "Jeep";
+app.locals.terrain = "Mountains";
+app.locals.climate = "Desert";
+app.locals.location = "Unknown";
 app.get('/jade', function (req, res) {
   res.render('user_jade');
 });

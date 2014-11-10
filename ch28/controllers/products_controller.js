@@ -4,7 +4,7 @@ exports.getProduct = function(req, res) {
   Product.findOne({ _id: req.query.productId })
   .exec(function(err, product) {
     if (!product){
-      res.json(404, {msg: 'Photo Not Found.'});
+      res.json(404, {msg: 'Product Not Found.'});
     } else {
       res.json(product);
     }

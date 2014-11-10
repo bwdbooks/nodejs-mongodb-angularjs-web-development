@@ -60,6 +60,6 @@ for (var i=0; i<wordArr.length; i++){
   }
 }
 db = connect("localhost/words");
-db.word_stats.remove();
+db.word_stats.remove({});
 db.word_stats.ensureIndex({word: 1}, {unique: true});
 db.word_stats.insert(wordObjArr);

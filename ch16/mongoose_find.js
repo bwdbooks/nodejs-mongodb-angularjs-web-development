@@ -25,7 +25,7 @@ mongoose.connection.once('open', function(){
   query.limit(10);
   query.select({word:1, size:1});
   query.exec(function(err, docs){
-    console.log("\nWords with even lengths and longer than 5 letters: ");
+    console.log("\nWords with even lengths and longer than 6 letters: ");
     for (var i in docs){
       console.log(JSON.stringify(docs[i]));
     }
