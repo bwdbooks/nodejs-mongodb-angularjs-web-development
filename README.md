@@ -1,4 +1,4 @@
 nodejs-mongodb-angularjs-web-development
 ========================================
 
-For the Node.js, MongoDB and AngularJS Web Development Book
+For the Node.js, MongoDB and AngularJS Web Development Book tutorials.
