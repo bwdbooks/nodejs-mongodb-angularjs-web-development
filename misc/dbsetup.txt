@@ -1,0 +1,10 @@
+use test
+db.createUser( { user: "testUser", pwd: "test", roles: [ "readWrite", "dbAdmin" ] } )
+
+use devdb
+db.createUser( { user: "dev", pwd: "Oracle10g", roles: [ "readWrite", "dbAdmin" ] } )
+
+
+db.createUser({ user: "mongoadmin" , pwd: "mongoadmin", 
+                roles: ["userAdminAnyDatabase", "dbAdminAnyDatabase", "readWriteAnyDatabase"]})
+
